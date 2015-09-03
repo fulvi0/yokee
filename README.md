@@ -4,8 +4,6 @@
 
 The best way to **keep**, **stream** and **share** the music that you *love* from playlist of youtube.
 
-Power by [PerkHand](http://perkhand.com)
-
 ___
 
 **Setup connection with bucket on AWS S3**
@@ -20,3 +18,6 @@ class Application < Rails::Applicatio
     BUCKET = 'music-storage'
 end
 ```
+___
+
+Power by [PerkHand](http://perkhand.com)
