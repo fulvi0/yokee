@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# aws key ignore
+/key.txt
