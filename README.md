@@ -10,12 +10,12 @@ ___
 
 ```ruby
 class Application < Rails::Applicatio
-    AWS::S3::Base.establish_connection!(
-        :access_key_id     => 'access key',
-        :secret_access_key => 'secret key'
-        )
+  s3 = AWS::S3.new(
+      :access_key_id     => 'access key',
+      :secret_access_key => 'secret key'
+      )
 
-    BUCKET = 'music-storage'
+  BUCKET = 'music-storage'
 end
 ```
 ___
