@@ -23,10 +23,10 @@ module Mpapp
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    AWS::S3::Base.establish_connection!(
-    :access_key_id     => 'access_key_id',
-    :secret_access_key => 'secret_access_key'
-    )
+    s3 = AWS::S3.new(
+        :access_key_id     => 'access key',
+        :secret_access_key => 'secret key'
+        )
 
     BUCKET = 'music-storage'
 
