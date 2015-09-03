@@ -28,7 +28,7 @@ module Mpapp
         :secret_access_key => 'secret key'
         )
 
-    BUCKET = 'music-storage'
+    bucket = s3.buckets['music-storage']
 
   end
 end
