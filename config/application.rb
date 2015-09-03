@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'aws/s3'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -23,10 +24,12 @@ module Mpapp
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    s3 = AWS::S3.new(
-        :access_key_id     => 'access key',
-        :secret_access_key => 'secret key'
-        )
+    #AWS::S3.buckets
+
+    # s3 = AWS::S3.new(
+    #     :access_key_id     => 'access key',
+    #     :secret_access_key => 'secret key'
+    #     )
 
     bucket = s3.buckets['music-storage']
 
